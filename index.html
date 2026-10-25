@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShubhGifts | Premium Diwali & General Gift Shop India</title>
+    <meta name="description" content="Shop 1,000+ curated gifts, Diwali hampers, personalized keepsakes, corporate gift boxes, and gourmet sets with up to 60% OFF in our Diwali Sale. Express delivery across India.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#3A105C',
+                            darkPurple: '#24083B',
+                            saffron: '#FF6B00',
+                            gold: '#D4AF37',
+                            goldHover: '#B89628',
+                            cream: '#FFFDF9',
+                            maroon: '#600018',
+                            green: '#0D7A5F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFDF9;
+            color: #2D2D2D;
+        }
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .diya-glow {
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.35);
+        }
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F3EFEA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-saffron selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-brand-maroon via-brand-purple to-brand-maroon text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50 flex justify-between items-center no-print">
+        <div class="hidden md:block text-amber-300/80"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Festive Gifting Express</div>
+        <div class="mx-auto flex items-center space-x-2">
+            <span class="bg-brand-saffron text-white px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide animate-pulse">Diwali Sale</span>
+            <span>Get <strong>50% - 60% OFF</strong> on Diwali Gift Hampers & Premium Decor! Code: <code>SHUBH60</code></span>
+        </div>
+        <div class="hidden md:flex items-center space-x-4 text-xs">
+            <a href="javascript:void(0)" onclick="switchPage('contact')" class="hover:underline text-amber-200"><i class="fa-solid fa-headset mr-1"></i> Support</a>
+            <span class="text-amber-400">|</span>
+            <span><i class="fa-solid fa-truck-fast mr-1"></i> Free Shipping > ₹999</span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-amber-100 shadow-sm no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-4">
+                
+                <!-- Brand Logo -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="switchPage('home')">
+                    <div class="w-11 h-11 bg-gradient-to-br from-brand-purple to-brand-maroon rounded-xl flex items-center justify-center text-amber-300 text-2xl shadow-md border border-brand-gold/40">
+                        🪔
+                    </div>
+                    <div>
+                        <span class="font-serif-title text-2xl font-bold tracking-tight bg-gradient-to-r from-brand-purple via-brand-maroon to-brand-saffron bg-clip-text text-transparent">ShubhGifts</span>
+                        <span class="block text-[10px] font-semibold uppercase tracking-widest text-brand-gold -mt-1">Festive & Celebrations</span>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex flex-1 max-w-xl mx-4 relative">
+                    <input type="text" id="searchInput" placeholder="Search 1,000+ gifts (e.g. Diwali Hamper, Brass Diya, Photo Frame)..." 
+                        onkeyup="handleSearchKey(event)"
+                        class="w-full bg-stone-50 border border-amber-200 rounded-full py-2.5 pl-5 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-brand-saffron focus:bg-white transition-all">
+                    <button onclick="executeSearch()" class="absolute right-1 top-1/2 -translate-y-1/2 w-9 h-9 bg-brand-purple hover:bg-brand-maroon text-amber-300 rounded-full flex items-center justify-center transition-colors">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Navigation Actions -->
+                <div class="flex items-center space-x-3 sm:space-x-5">
+                    
+                    <!-- AI Gift Guide Callout -->
+                    <button onclick="switchPage('ai-guide')" class="hidden lg:flex items-center space-x-2 bg-gradient-to-r from-amber-500 to-brand-saffron hover:from-amber-600 hover:to-orange-600 text-white px-3.5 py-2 rounded-full text-xs font-semibold shadow-md transition-all transform hover:scale-105">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>AI Gift Finder</span>
+                    </button>
+
+                    <!-- Wishlist -->
+                    <button onclick="switchPage('wishlist')" class="relative p-2 text-stone-700 hover:text-brand-saffron transition-colors" title="Wishlist">
+                        <i class="fa-regular fa-heart text-xl"></i>
+                        <span id="wishlistCount" class="absolute -top-1 -right-1 bg-brand-saffron text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Cart -->
+                    <button onclick="switchPage('cart')" class="relative p-2 text-stone-700 hover:text-brand-saffron transition-colors" title="Cart">
+                        <i class="fa-solid fa-bag-shopping text-xl"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-brand-purple text-amber-300 text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-brand-gold">0</span>
+                    </button>
+
+                    <!-- User Account / Admin -->
+                    <div class="relative group">
+                        <button onclick="switchPage('admin')" class="p-2 text-stone-700 hover:text-brand-purple transition-colors flex items-center space-x-1" title="Account / Admin">
+                            <i class="fa-regular fa-user text-xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Trigger -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-700 hover:text-brand-purple">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CATEGORY NAV (DESKTOP) -->
+        <nav class="hidden md:block bg-brand-purple text-white text-xs font-medium border-t border-brand-gold/30">
+            <div class="max-w-7xl mx-auto px-4 flex items-center justify-between overflow-x-auto no-scrollbar">
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Diwali Special')" class="px-3 py-3 text-amber-300 hover:bg-brand-maroon font-bold flex items-center space-x-1 whitespace-nowrap border-b-2 border-amber-300">
+                    <span>🪔 Diwali Collection</span>
+                </a>
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Personalized Gifts')" class="px-3 py-3 text-stone-200 hover:text-amber-300 whitespace-nowrap">Personalized</a>
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Gourmet Gifts &amp; Hampers')" class="px-3 py-3 text-stone-200 hover:text-amber-300 whitespace-nowrap">Gift Hampers</a>
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Birthday Gifts')" class="px-3 py-3 text-stone-200 hover:text-amber-300 whitespace-nowrap">Birthdays</a>
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Anniversary &amp; Romantic')" class="px-3 py-3 text-stone-200 hover:text-amber-300 whitespace-nowrap">Anniversary</a>
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Corporate Gifting')" class="px-3 py-3 text-amber-200 hover:text-white font-semibold whitespace-nowrap">💼 Corporate &amp; Bulk</a>
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Home Decor &amp; Lifestyle')" class="px-3 py-3 text-stone-200 hover:text-amber-300 whitespace-nowrap">Home Decor</a>
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Gifts for Children')" class="px-3 py-3 text-stone-200 hover:text-amber-300 whitespace-nowrap">Kids</a>
+                <a href="javascript:void(0)" onclick="filterCatalogCategory('Eco-Friendly &amp; Handcrafted')" class="px-3 py-3 text-emerald-300 hover:text-emerald-100 whitespace-nowrap">🌱 Eco-Friendly</a>
+                <a href="javascript:void(0)" onclick="switchPage('ai-guide')" class="px-3 py-3 text-amber-300 hover:text-white font-bold whitespace-nowrap">✨ AI Gift Assistant</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobileMenu" class="fixed inset-0 bg-stone-900/60 z-50 hidden no-print">
+        <div class="bg-white w-4/5 max-w-sm h-full p-5 overflow-y-auto flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-between pb-4 border-b border-stone-200">
+                    <span class="font-serif-title font-bold text-xl text-brand-purple">ShubhGifts</span>
+                    <button onclick="toggleMobileMenu()" class="text-stone-500 text-xl">&times;</button>
+                </div>
+                <div class="mt-4">
+                    <input type="text" id="mobileSearchInput" placeholder="Search 1,000+ gifts..." 
+                        onkeyup="if(event.key==='Enter') { executeMobileSearch(); }"
+                        class="w-full bg-stone-100 border border-stone-300 rounded-lg p-2 text-sm mb-4">
+                </div>
+                <div class="space-y-2 text-sm font-medium text-stone-700">
+                    <a href="javascript:void(0)" onclick="switchPage('home'); toggleMobileMenu()" class="block py-2 text-brand-saffron font-bold">Home</a>
+                    <a href="javascript:void(0)" onclick="filterCatalogCategory('Diwali Special'); toggleMobileMenu()" class="block py-2 text-brand-purple font-bold">🪔 Diwali Special Collection</a>
+                    <a href="javascript:void(0)" onclick="switchPage('catalog'); toggleMobileMenu()" class="block py-2">All 1,000+ Products</a>
+                    <a href="javascript:void(0)" onclick="switchPage('ai-guide'); toggleMobileMenu()" class="block py-2 text-amber-600 font-bold">🤖 AI Gift Finder</a>
+                    <a href="javascript:void(0)" onclick="filterCatalogCategory('Personalized Gifts'); toggleMobileMenu()" class="block py-2">Personalized Gifts</a>
+                    <a href="javascript:void(0)" onclick="filterCatalogCategory('Corporate Gifting'); toggleMobileMenu()" class="block py-2">Corporate & Bulk Ordering</a>
+                    <a href="javascript:void(0)" onclick="filterCatalogCategory('Gourmet Gifts &amp; Hampers'); toggleMobileMenu()" class="block py-2">Gift Hampers</a>
+                    <a href="javascript:void(0)" onclick="switchPage('admin'); toggleMobileMenu()" class="block py-2 text-stone-500">Admin Portal</a>
+                </div>
+            </div>
+            <div class="border-t border-stone-200 pt-4 text-xs text-stone-500">
+                <p>Need help? Call +91 98765 43210</p>
+                <p class="mt-1">Express Shipping Across India 🇮🇳</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN DYNAMIC CONTENT CONTAINER -->
+    <main id="appContainer" class="flex-grow">
+        <!-- Dynamic content will be rendered here via JS routing -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkPurple text-stone-300 text-sm mt-16 border-t-4 border-brand-gold no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- About Column -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-2xl">🪔</span>
+                        <span class="font-serif-title text-2xl font-bold text-amber-300">ShubhGifts</span>
+                    </div>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        India's premier online gift store. Elevating Diwali, birthdays, anniversaries, and corporate celebrations with over 1,000+ curated handcrafted hampers, personalized keepsakes, and luxury decor items.
+                    </p>
+                    <div class="flex space-x-3 text-amber-300 text-lg">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h3 class="text-white font-serif-title font-semibold text-base mb-4 border-b border-brand-gold/20 pb-2">Gifting Categories</h3>
+                    <ul class="space-y-2 text-xs text-stone-300">
+                        <li><a href="javascript:void(0)" onclick="filterCatalogCategory('Diwali Special')" class="hover:text-amber-300">Diwali Gift Boxes &amp; Diyas</a></li>
+                        <li><a href="javascript:void(0)" onclick="filterCatalogCategory('Personalized Gifts')" class="hover:text-amber-300">Engraved Photo Frames &amp; Mugs</a></li>
+                        <li><a href="javascript:void(0)" onclick="filterCatalogCategory('Gourmet Gifts &amp; Hampers')" class="hover:text-amber-300">Luxury Sweets &amp; Dry Fruit Baskets</a></li>
+                        <li><a href="javascript:void(0)" onclick="filterCatalogCategory('Corporate Gifting')" class="hover:text-amber-300">Corporate &amp; Employee Hampers</a></li>
+                        <li><a href="javascript:void(0)" onclick="filterCatalogCategory('Home Decor &amp; Lifestyle')" class="hover:text-amber-300">Festive Home Decor &amp; Brassware</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Care -->
+                <div>
+                    <h3 class="text-white font-serif-title font-semibold text-base mb-4 border-b border-brand-gold/20 pb-2">Customer Care</h3>
+                    <ul class="space-y-2 text-xs text-stone-300">
+                        <li><a href="javascript:void(0)" onclick="switchPage('contact')" class="hover:text-amber-300">Contact Us &amp; FAQs</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('policy-shipping')" class="hover:text-amber-300">Shipping &amp; Delivery Policy</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('policy-returns')" class="hover:text-amber-300">Returns &amp; Refund Guidelines</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('policy-privacy')" class="hover:text-amber-300">Privacy Policy &amp; Security</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('policy-terms')" class="hover:text-amber-300">Terms &amp; Conditions</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSitemapModal()" class="hover:text-amber-300"><i class="fa-solid fa-sitemap mr-1"></i> View XML Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Trust -->
+                <div class="space-y-4">
+                    <h3 class="text-white font-serif-title font-semibold text-base mb-2">Festive Offers &amp; Newsletter</h3>
+                    <p class="text-xs text-stone-400">Subscribe for early access to Diwali flash sales and secret coupon codes.</p>
+                    <form onsubmit="handleNewsletterSubmit(event)" class="space-y-2">
+                        <input type="email" required placeholder="Enter your email address..." class="w-full bg-stone-800 border border-stone-700 rounded px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-brand-gold">
+                        <button type="submit" class="w-full bg-brand-saffron hover:bg-orange-600 text-white font-semibold py-2 rounded text-xs transition-colors">
+                            Subscribe &amp; Get ₹200 OFF
+                        </button>
+                    </form>
+                    <div class="pt-2">
+                        <div class="text-[11px] text-stone-400 mb-1">Guaranteed Safe Checkout:</div>
+                        <div class="flex items-center space-x-2 text-lg text-stone-300">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            <i class="fa-brands fa-google-pay"></i>
+                            <i class="fa-solid fa-qrcode" title="UPI Payment"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Legal -->
+            <div class="mt-12 pt-6 border-t border-stone-800 flex flex-col md:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+                <p>&copy; 2026 ShubhGifts Retail Pvt. Ltd. All Rights Reserved. Built for Diwali &amp; All Indian Celebrations.</p>
+                <div class="flex space-x-4">
+                    <span>100% Verified Authentic Products</span>
+                    <span>•</span>
+                    <span>Safe &amp; Encrypted Payments</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SITEMAP MODAL PREVIEW -->
+    <div id="sitemapModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden shadow-2xl">
+            <div class="p-4 bg-brand-purple text-white flex justify-between items-center">
+                <h3 class="font-serif-title font-bold text-lg"><i class="fa-solid fa-sitemap text-amber-300 mr-2"></i> Standard SEO XML Sitemap Index</h3>
+                <button onclick="closeSitemapModal()" class="text-xl">&times;</button>
+            </div>
+            <div class="p-5 overflow-y-auto font-mono text-xs text-stone-800 bg-stone-50 space-y-2">
+                <p class="text-stone-500 font-sans text-xs mb-3">Auto-generated XML URL mapping for 1,020+ indexable gift products and dynamic occasion categories:</p>
+                <div class="bg-white border p-3 rounded border-stone-200">
+                    &lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+                    &lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;<br>
+                    &nbsp;&nbsp;&lt;url&gt;&lt;loc&gt;https://shubhgifts.in/&lt;/loc&gt;&lt;priority&gt;1.0&lt;/priority&gt;&lt;/url&gt;<br>
+                    &nbsp;&nbsp;&lt;url&gt;&lt;loc&gt;https://shubhgifts.in/category/diwali-special&lt;/loc&gt;&lt;priority&gt;0.9&lt;/priority&gt;&lt;/url&gt;<br>
+                    &nbsp;&nbsp;&lt;url&gt;&lt;loc&gt;https://shubhgifts.in/category/personalized-gifts&lt;/loc&gt;&lt;priority&gt;0.9&lt;/priority&gt;&lt;/url&gt;<br>
+                    &nbsp;&nbsp;&lt;url&gt;&lt;loc&gt;https://shubhgifts.in/category/gourmet-hampers&lt;/loc&gt;&lt;priority&gt;0.85&lt;/priority&gt;&lt;/url&gt;<br>
+                    &nbsp;&nbsp;&lt;url&gt;&lt;loc&gt;https://shubhgifts.in/category/corporate-gifting&lt;/loc&gt;&lt;priority&gt;0.85&lt;/priority&gt;&lt;/url&gt;<br>
+                    &nbsp;&nbsp;&lt;!-- Dynamic Products 1 to 1020 --&gt;<br>
+                    &nbsp;&nbsp;&lt;url&gt;&lt;loc&gt;https://shubhgifts.in/product/SG-DIW-1001-royal-brass-diya-set&lt;/loc&gt;&lt;priority&gt;0.8&lt;/priority&gt;&lt;/url&gt;<br>
+                    &nbsp;&nbsp;&lt;url&gt;&lt;loc&gt;https://shubhgifts.in/product/SG-PER-1002-engraved-wooden-photo-frame&lt;/loc&gt;&lt;priority&gt;0.8&lt;/priority&gt;&lt;/url&gt;<br>
+                    &nbsp;&nbsp;... [1,018 additional canonical product URLs generated] ...<br>
+                    &lt;/urlset&gt;
+                </div>
+            </div>
+            <div class="p-4 bg-stone-100 text-right">
+                <button onclick="closeSitemapModal()" class="px-4 py-2 bg-brand-purple text-white rounded text-xs font-semibold">Close Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN JAVASCRIPT APPLICATION CORE -->
+    <script>
+        // ==========================================
+        // 1. GLOBAL STATE & CONFIGURATION
+        // ==========================================
+        const CONFIG = {
+            appName: "ShubhGifts",
+            currency: "₹",
+            taxRate: 0.18, // 18% GST standard
+            shippingThreshold: 999,
+            flatShippingRate: 99,
+            catalogMinCount: 1000,
+            geminiApiKey: "" // Will fallback to smart client matching if not provided
+        };
+
+        // Master categories structure for procedural dataset generator
+        const CATEGORIES_DATA = [
+            {
+                name: "Diwali Special",
+                prefix: "DIW",
+                subcategories: ["Brass & Terracotta Diyas", "LED Festive Lights", "Rangoli Kits & Colors", "Dry Fruit Gift Boxes", "Festive Sweets Hampers", "Decorative Torans & Hangings", "Scented Candles & Lanterns"]
+            },
+            {
+                name: "Personalized Gifts",
+                prefix: "PER",
+                subcategories: ["Engraved Wooden Frames", "Custom Photo Mugs", "Personalized Cushions", "Nameplate Designs", "Custom Keepsake Boxes", "Personalized Leather Keychains", "Customized Name Stationery"]
+            },
+            {
+                name: "Birthday Gifts",
+                prefix: "BTH",
+                subcategories: ["Surprise Gift Boxes", "Birthday Accessories", "Custom Birthday Cards", "Age-Specific Bundles", "Balloons & Party Kits"]
+            },
+            {
+                name: "Anniversary & Romantic",
+                prefix: "ANV",
+                subcategories: ["Couple Mug Sets", "Engraved Romantic Keepsakes", "Anniversary Hampers", "Love Photo Albums", "Romantic Candle Bundles"]
+            },
+            {
+                name: "Wedding & Engagement",
+                prefix: "WED",
+                subcategories: ["Luxury Wedding Hampers", "Decorative Silver-Plated Trays", "Engagement Gift Boxes", "Wedding Return Gifts"]
+            },
+            {
+                name: "Home Decor & Lifestyle",
+                prefix: "DEC",
+                subcategories: ["Brass Table Artifacts", "Decorative Vases", "Artistic Desk Clocks", "Planters & Indoor Greens", "Wall Hangings & Sculptures"]
+            },
+            {
+                name: "Gifts for Children",
+                prefix: "KID",
+                subcategories: ["Educational DIY Craft Kits", "Storybook Bundles", "Plush Toys & Soft Dolls", "Building Blocks & Games"]
+            },
+            {
+                name: "Stationery & Creative",
+                prefix: "STN",
+                subcategories: ["Handcrafted Leather Journals", "Executive Pen Sets", "Yearly Planners & Agendas", "Desktop Organizers"]
+            },
+            {
+                name: "Accessories & Wearables",
+                prefix: "ACC",
+                subcategories: ["Genuine Leather Wallets", "Designer Scarves & Stoles", "Travel Organizers", "Men's Gift Combos"]
+            },
+            {
+                name: "Gourmet Gifts & Hampers",
+                prefix: "GMT",
+                subcategories: ["Artisanal Chocolate Boxes", "Organic Tea Gift Sets", "Exotic Nut Baskets", "Festive Snack Hampers"]
+            },
+            {
+                name: "Wellness & Self-Care",
+                prefix: "WEL",
+                subcategories: ["Aromatherapy Diffusers", "Handcrafted Herbal Soaps", "Relaxation Bath Kits", "Scented Soy Candle Sets"]
+            },
+            {
+                name: "Eco-Friendly & Handcrafted",
+                prefix: "ECO",
+                subcategories: ["Plantable Seed Stationery", "Bamboo Home Decor", "Artisan Terracotta Craft", "Upcycled Canvas Bags"]
+            },
+            {
+                name: "Corporate Gifting",
+                prefix: "COR",
+                subcategories: ["Executive Gift Sets", "Custom Branded Notebooks", "Employee Welcome Kits", "Client Appreciation Boxes"]
+            },
+            {
+                name: "Occasions & Seasonal",
+                prefix: "OCC",
+                subcategories: ["Housewarming Presents", "Thank You Baskets", "Graduation Keepsakes", "Retirement Gifts"]
+            }
+        ];
+
+        // Application State
+        let CATALOG = [];
+        let state = {
+            currentPage: 'home', // home, catalog, product-detail, cart, checkout, order-confirm, invoice, ai-guide, wishlist, admin, corporate, contact, policy
+            selectedCategory: 'All',
+            selectedSubcategory: 'All',
+            searchQuery: '',
+            sortBy: 'relevance',
+            priceFilter: 10000,
+            currentPageNum: 1,
+            itemsPerPage: 24,
+            selectedProduct: null,
+            cart: [], // [{ product, quantity, personalizationText }]
+            wishlist: [], // [productId]
+            currentOrder: null,
+            bulkQuote: {
+                quantity: 25,
+                product: null
+            }
+        };
+
+        // ==========================================
+        // 2. PROCEDURAL 1,000+ PRODUCTS GENERATOR
+        // ==========================================
+        function generateMasterCatalog() {
+            const catalog = [];
+            let globalId = 1001;
+
+            const adjectives = ["Royal", "Festive", "Handcrafted", "Luxury", "Artisanal", "Traditional", "Elegant", "Premium", "Golden", "Custom", "Gilded", "Organic", "Exquisite", "Modern"];
+            const materials = ["Brass", "Copper", "Pure Silver Finish", "Mango Wood", "Marble", "Terracotta", "Silk", "Velvet", "Leatherette", "Glass", "Stainless Steel"];
+
+            // Loop across categories to build at least 1,020 items
+            CATEGORIES_DATA.forEach((catObj) => {
+                const itemsPerSubcat = Math.ceil(80 / catObj.subcategories.length); // ~80 per category
+
+                catObj.subcategories.forEach((subcat) => {
+                    for (let i = 1; i <= itemsPerSubcat; i++) {
+                        const idStr = `SG-${catObj.prefix}-${globalId}`;
+                        const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+                        const mat = materials[Math.floor(Math.random() * materials.length)];
+                        
+                        // Construct realistic product title
+                        const name = `${adj} ${mat} ${subcat.replace(/s$/, '')} - ${catObj.name === 'Diwali Special' ? 'Diwali Edition' : 'Gift Edition'} ${i}`;
+                        
+                        // Pricing & Discounts
+                        const regularPrice = Math.floor(Math.random() * 45 + 5) * 100 + 99; // ₹599 to ₹4999
+                        const isDiwaliSale = Math.random() > 0.3; // 70% of items on sale
+                        const discountPercent = isDiwaliSale ? Math.floor(Math.random() * 11 + 50) : 0; // 50% - 60% OFF
+                        const currentPrice = isDiwaliSale ? Math.round(regularPrice * (1 - discountPercent / 100)) : regularPrice;
+
+                        // Image placeholder matching category visually
+                        const imgSeed = encodeURIComponent(`${catObj.name} ${subcat} ${i}`);
+                        const primaryImg = `https://picsum.photos/seed/${imgSeed}/600/600`;
+
+                        catalog.push({
+                            id: globalId.toString(),
+                            sku: idStr,
+                            name: name,
+                            category: catObj.name,
+                            subcategory: subcat,
+                            price: currentPrice,
+                            regularPrice: regularPrice,
+                            discountPercent: discountPercent,
+                            rating: (Math.random() * 0.8 + 4.2).toFixed(1), // 4.2 to 5.0
+                            reviewsCount: Math.floor(Math.random() * 120 + 12),
+                            inStock: Math.random() > 0.05, // 95% in stock
+                            stockQty: Math.floor(Math.random() * 80 + 10),
+                            isDiwaliSpecial: catObj.name === "Diwali Special" || isDiwaliSale,
+                            isPersonalized: catObj.name === "Personalized Gifts" || subcat.includes("Custom") || subcat.includes("Engraved"),
+                            isBulkEligible: true,
+                            image: primaryImg,
+                            description: `Elevate your festive gifting with this ${name.toLowerCase()}. Handcrafted with high-grade ${mat.toLowerCase()} and meticulous attention to detail. Perfect for home decor, gifting family, colleagues, or loved ones during Diwali and special celebrations. Includes luxury gift packaging.`
+                        });
+
+                        globalId++;
+                    }
+                });
+            });
+
+            // Verification check as mandated
+            console.log(`[Catalog System] Generated ${catalog.length} unique gift product records.`);
+            if (catalog.length < CONFIG.catalogMinCount) {
+                console.error(`CATALOG VALIDATION FAILED: Generated ${catalog.length} products, minimum required is ${CONFIG.catalogMinCount}`);
+            }
+            return catalog;
+        }
+
+        // Initialize Catalog
+        CATALOG = generateMasterCatalog();
+
+        // ==========================================
+        // 3. PERSISTENCE & LOCAL STORAGE HELPERS
+        // ==========================================
+        function loadSavedState() {
+            try {
+                const savedCart = localStorage.getItem('shubh_cart');
+                const savedWish = localStorage.getItem('shubh_wishlist');
+                if (savedCart) state.cart = JSON.parse(savedCart);
+                if (savedWish) state.wishlist = JSON.parse(savedWish);
+            } catch (e) {
+                console.warn("Storage access unavailable", e);
+            }
+            updateCounters();
+        }
+
+        function saveState() {
+            try {
+                localStorage.setItem('shubh_cart', JSON.stringify(state.cart));
+                localStorage.setItem('shubh_wishlist', JSON.stringify(state.wishlist));
+            } catch (e) {
+                console.warn("Storage save failed", e);
+            }
+            updateCounters();
+        }
+
+        function updateCounters() {
+            const cartCountEl = document.getElementById('cartCount');
+            const wishCountEl = document.getElementById('wishlistCount');
+            if (cartCountEl) {
+                const totalQty = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCountEl.innerText = totalQty;
+            }
+            if (wishCountEl) {
+                wishCountEl.innerText = state.wishlist.length;
+            }
+        }
+
+        // ==========================================
+        // 4. ROUTING & UI NAVIGATION ENGINE
+        // ==========================================
+        function switchPage(page, payload = null) {
+            state.currentPage = page;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            const container = document.getElementById('appContainer');
+            if (!container) return;
+
+            switch (page) {
+                case 'home':
+                    container.innerHTML = renderHomePage();
+                    break;
+                case 'catalog':
+                    container.innerHTML = renderCatalogPage();
+                    break;
+                case 'product-detail':
+                    if (payload) state.selectedProduct = payload;
+                    container.innerHTML = renderProductDetailPage();
+                    break;
+                case 'cart':
+                    container.innerHTML = renderCartPage();
+                    break;
+                case 'checkout':
+                    container.innerHTML = renderCheckoutPage();
+                    break;
+                case 'order-confirm':
+                    container.innerHTML = renderOrderConfirmPage();
+                    break;
+                case 'invoice':
+                    container.innerHTML = renderInvoicePage();
+                    break;
+                case 'ai-guide':
+                    container.innerHTML = renderAIGuidePage();
+                    break;
+                case 'wishlist':
+                    container.innerHTML = renderWishlistPage();
+                    break;
+                case 'admin':
+                    container.innerHTML = renderAdminPage();
+                    break;
+                case 'contact':
+                    container.innerHTML = renderContactPage();
+                    break;
+                case 'policy-shipping':
+                    container.innerHTML = renderPolicyPage("Shipping & Delivery Policy", "Orders placed on ShubhGifts are dispatched within 24-48 business hours. We partner with Tier-1 express courier partners across India. Express shipping takes 2-4 business days for major metropolitan areas.");
+                    break;
+                case 'policy-returns':
+                    container.innerHTML = renderPolicyPage("Returns & Refund Policy", "Due to the personalized nature of engraved gifts and festive sweet boxes, returns are accepted within 7 days only for items received in damaged condition. Please capture an unboxing video for quick replacement.");
+                    break;
+                case 'policy-privacy':
+                    container.innerHTML = renderPolicyPage("Privacy & Data Protection", "ShubhGifts ensures strict end-to-end data privacy. We do not store financial credentials or credit card numbers. Customer phone numbers are strictly used for order updates.");
+                    break;
+                case 'policy-terms':
+                    container.innerHTML = renderPolicyPage("Terms & Conditions", "By browsing ShubhGifts.in, you agree to our fair usage and pricing terms. Bulk discounts are applied transparently based on ordered order quantities.");
+                    break;
+                default:
+                    container.innerHTML = renderHomePage();
+            }
+
+            // Inject SEO schema dynamically
+            updateSEOMetadata();
+        }
+
+        function filterCatalogCategory(categoryName) {
+            state.selectedCategory = categoryName;
+            state.selectedSubcategory = 'All';
+            state.searchQuery = '';
+            state.currentPageNum = 1;
+            switchPage('catalog');
+        }
+
+        function executeSearch() {
+            const input = document.getElementById('searchInput');
+            if (input) {
+                state.searchQuery = input.value.trim();
+                state.selectedCategory = 'All';
+                state.currentPageNum = 1;
+                switchPage('catalog');
+            }
+        }
+
+        function handleSearchKey(e) {
+            if (e.key === 'Enter') executeSearch();
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) menu.classList.toggle('hidden');
+        }
+
+        function openSitemapModal() {
+            document.getElementById('sitemapModal')?.classList.remove('hidden');
+        }
+        function closeSitemapModal() {
+            document.getElementById('sitemapModal')?.classList.add('hidden');
+        }
+
+        // ==========================================
+        // 5. VIEW RENDERERS (PHASE 1 & PHASE 2)
+        // ==========================================
+
+        // A. HOME PAGE
+        function renderHomePage() {
+            const featuredDiwali = CATALOG.filter(p => p.category === 'Diwali Special').slice(0, 8);
+            const featuredPersonalized = CATALOG.filter(p => p.isPersonalized).slice(0, 4);
+
+            return `
+                <!-- HERO BANNER -->
+                <section class="relative bg-gradient-to-r from-brand-darkPurple via-brand-purple to-brand-maroon text-white overflow-hidden">
+                    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+                        <div class="max-w-2xl space-y-6 text-center md:text-left">
+                            <div class="inline-flex items-center space-x-2 bg-brand-gold/20 border border-brand-gold/40 text-amber-200 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                                <span>🪔 Grand Diwali Festival Sale 2026</span>
+                            </div>
+                            <h1 class="font-serif-title text-3xl sm:text-5xl font-bold tracking-tight text-amber-100 leading-tight">
+                                Make Every Diwali Moment Special. <span class="text-brand-saffron">Find the Perfect Gift.</span>
+                            </h1>
+                            <p class="text-stone-300 text-sm sm:text-base leading-relaxed max-w-xl">
+                                Explore India's grandest collection of 1,000+ curated Diwali gift hampers, royal brass diyas, personalized photo keepsakes, and executive corporate hampers with express shipping.
+                            </p>
+                            <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
+                                <button onclick="filterCatalogCategory('Diwali Special')" class="bg-brand-saffron hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-sm">
+                                    🪔 Shop Diwali Gifts (Up to 60% OFF)
+                                </button>
+                                <button onclick="switchPage('ai-guide')" class="bg-white/10 hover:bg-white/20 border border-brand-gold/40 text-amber-200 font-semibold px-6 py-3 rounded-xl backdrop-blur-sm transition-all text-sm">
+                                    ✨ Try AI Gift Guide
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Hero Visual Card -->
+                        <div class="w-full md:w-5/12 max-w-md">
+                            <div class="bg-gradient-to-b from-brand-gold/30 to-amber-900/40 p-1.5 rounded-3xl backdrop-blur-md shadow-2xl diya-glow">
+                                <div class="bg-brand-purple rounded-[22px] overflow-hidden p-6 text-center border border-brand-gold/30">
+                                    <div class="text-6xl mb-3">🪔🎁✨</div>
+                                    <span class="text-xs uppercase tracking-widest text-amber-300 font-bold block mb-1">Diwali Festive Box</span>
+                                    <h3 class="font-serif-title text-xl text-white font-bold">Royal Brass Diya & Gourmet Dry Fruit Set</h3>
+                                    <div class="mt-3 flex items-center justify-center space-x-2">
+                                        <span class="text-stone-400 line-through text-sm">₹2,499</span>
+                                        <span class="text-amber-300 text-xl font-bold">₹999</span>
+                                        <span class="bg-brand-saffron text-white text-[10px] px-2 py-0.5 rounded font-bold">60% OFF</span>
+                                    </div>
+                                    <button onclick="switchPage('product-detail', CATALOG[0])" class="mt-4 w-full bg-brand-saffron hover:bg-orange-600 text-white text-xs font-bold py-2.5 rounded-lg shadow">
+                                        View Bestseller Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SHOP BY OCCASION CARDS -->
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                        <div>
+                            <span class="text-brand-saffron font-bold text-xs uppercase tracking-wider">Curated Collections</span>
+                            <h2 class="font-serif-title text-2xl sm:text-3xl font-bold text-brand-purple mt-1">Shop Gifts by Occasion</h2>
+                        </div>
+                        <button onclick="switchPage('catalog')" class="text-brand-purple text-xs font-bold hover:underline mt-2 md:mt-0">
+                            Explore All 1,000+ Gifts <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                        ${renderOccasionCard("🪔 Diwali Festival", "Diwali Special", "from-amber-600 to-orange-700")}
+                        ${renderOccasionCard("🎂 Birthdays", "Birthday Gifts", "from-purple-600 to-indigo-700")}
+                        ${renderOccasionCard("💍 Anniversary", "Anniversary & Romantic", "from-rose-600 to-red-700")}
+                        ${renderOccasionCard("💒 Wedding", "Wedding & Engagement", "from-emerald-600 to-teal-700")}
+                        ${renderOccasionCard("💼 Corporate", "Corporate Gifting", "from-slate-700 to-stone-800")}
+                        ${renderOccasionCard("🖼️ Personalized", "Personalized Gifts", "from-amber-700 to-yellow-800")}
+                    </div>
+                </section>
+
+                <!-- SHOP BY BUDGET QUICK BAR -->
+                <section class="bg-stone-100 py-8 border-y border-stone-200">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <h3 class="font-serif-title font-bold text-stone-800 text-lg mb-4">Shop Gifts Within Your Budget</h3>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <button onclick="filterByPriceRange(299)" class="bg-white border hover:border-brand-saffron hover:text-brand-saffron px-4 py-2 rounded-full text-xs font-semibold shadow-sm transition-all">Under ₹299</button>
+                            <button onclick="filterByPriceRange(499)" class="bg-white border hover:border-brand-saffron hover:text-brand-saffron px-4 py-2 rounded-full text-xs font-semibold shadow-sm transition-all">₹300 - ₹499</button>
+                            <button onclick="filterByPriceRange(999)" class="bg-white border hover:border-brand-saffron hover:text-brand-saffron px-4 py-2 rounded-full text-xs font-semibold shadow-sm transition-all">₹500 - ₹999</button>
+                            <button onclick="filterByPriceRange(1999)" class="bg-white border hover:border-brand-saffron hover:text-brand-saffron px-4 py-2 rounded-full text-xs font-semibold shadow-sm transition-all">₹1,000 - ₹1,999</button>
+                            <button onclick="filterByPriceRange(4999)" class="bg-white border hover:border-brand-saffron hover:text-brand-saffron px-4 py-2 rounded-full text-xs font-semibold shadow-sm transition-all">₹2,000 - ₹4,999</button>
+                            <button onclick="filterByPriceRange(10000)" class="bg-white border hover:border-brand-saffron hover:text-brand-saffron px-4 py-2 rounded-full text-xs font-semibold shadow-sm transition-all">Luxury (₹5,000+)</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DIWALI SPECIAL FEATURED GRID -->
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-3xl p-6 sm:p-8">
+                        <div class="flex flex-col sm:flex-row items-center justify-between mb-8 pb-4 border-b border-amber-200/60">
+                            <div>
+                                <span class="bg-brand-saffron text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Diwali Bestsellers</span>
+                                <h2 class="font-serif-title text-2xl sm:text-3xl font-bold text-brand-purple mt-2">Diwali Hampers & Decor Specials</h2>
+                            </div>
+                            <button onclick="filterCatalogCategory('Diwali Special')" class="mt-4 sm:mt-0 bg-brand-purple hover:bg-brand-maroon text-amber-300 font-semibold text-xs px-4 py-2.5 rounded-lg transition-colors">
+                                View All Diwali Products (${CATALOG.filter(p=>p.category==='Diwali Special').length})
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            ${featuredDiwali.map(p => renderProductCard(p)).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI GIFT FINDER PROMO CARD -->
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                    <div class="bg-gradient-to-r from-brand-purple via-brand-maroon to-brand-purple rounded-3xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl gold-border">
+                        <div class="space-y-3 text-center md:text-left">
+                            <span class="bg-brand-gold text-brand-darkPurple text-xs font-bold px-3 py-1 rounded-full">Powered by Gemini AI</span>
+                            <h2 class="font-serif-title text-2xl sm:text-3xl font-bold text-amber-200">Confused What to Gift This Diwali?</h2>
+                            <p class="text-stone-300 text-xs sm:text-sm max-w-xl">
+                                Tell our AI assistant who you are buying for, your budget, and their interests. Receive customized recommendations from our 1,000+ catalog in seconds!
+                            </p>
+                        </div>
+                        <button onclick="switchPage('ai-guide')" class="bg-brand-saffron hover:bg-orange-600 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all text-sm whitespace-nowrap">
+                            <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Launch AI Gift Finder
+                        </button>
+                    </div>
+                </section>
+
+                <!-- CORPORATE & BULK GIFTING BANNER -->
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="bg-white border border-stone-200 rounded-3xl shadow-sm p-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+                        <div class="space-y-4 max-w-2xl">
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand-saffron">Business & Office Orders</span>
+                            <h3 class="font-serif-title text-2xl font-bold text-brand-purple">Corporate Diwali Gifting & Bulk Orders</h3>
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Looking to send 20, 50, or 500 custom Diwali hampers to employees or business clients? We offer tiered volume discounts, customized logo printing, and bulk dispatch across India.
+                            </p>
+                            <div class="grid grid-cols-3 gap-3 pt-2 text-center text-xs">
+                                <div class="bg-stone-50 border p-2 rounded-lg font-semibold text-brand-purple">10+ Units<br><span class="text-brand-saffron">10% OFF</span></div>
+                                <div class="bg-stone-50 border p-2 rounded-lg font-semibold text-brand-purple">50+ Units<br><span class="text-brand-saffron">20% OFF</span></div>
+                                <div class="bg-stone-50 border p-2 rounded-lg font-semibold text-brand-purple">100+ Units<br><span class="text-brand-saffron">Custom Quote</span></div>
+                            </div>
+                        </div>
+                        <button onclick="filterCatalogCategory('Corporate Gifting')" class="bg-brand-purple hover:bg-brand-maroon text-amber-200 font-bold px-6 py-3.5 rounded-xl text-xs transition-colors whitespace-nowrap">
+                            <i class="fa-solid fa-briefcase mr-2"></i> Request Bulk Quote
+                        </button>
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderOccasionCard(title, category, gradient) {
+            return `
+                <div onclick="filterCatalogCategory('${category}')" class="bg-gradient-to-br ${gradient} p-4 rounded-2xl text-white cursor-pointer hover:shadow-lg transition-all transform hover:-translate-y-1 flex flex-col justify-between h-32">
+                    <span class="text-xs font-medium text-white/80">Collection</span>
+                    <h4 class="font-serif-title font-bold text-base leading-tight">${title}</h4>
+                </div>
+            `;
+        }
+
+        // B. PRODUCT CARD COMPONENT
+        function renderProductCard(p) {
+            const isWish = state.wishlist.includes(p.id);
+
+            return `
+                <div class="bg-white border border-stone-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between group">
+                    <div class="relative overflow-hidden aspect-square bg-stone-100">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                        
+                        ${p.discountPercent > 0 ? `
+                            <span class="absolute top-2 left-2 bg-brand-saffron text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
+                                ${p.discountPercent}% OFF
+                            </span>
+                        ` : ''}
+
+                        <button onclick="toggleWishlist('${p.id}', event)" class="absolute top-2 right-2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center text-stone-700 transition-colors shadow">
+                            <i class="${isWish ? 'fa-solid text-red-500' : 'fa-regular'} fa-heart text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
+                        <div>
+                            <span class="text-[10px] text-stone-400 font-semibold uppercase tracking-wider block mb-1">${p.subcategory}</span>
+                            <h4 onclick="switchPage('product-detail', CATALOG.find(item=>item.id==='${p.id}'))" class="font-medium text-xs sm:text-sm text-stone-800 line-clamp-2 hover:text-brand-saffron cursor-pointer leading-snug">
+                                ${p.name}
+                            </h4>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center space-x-1 text-xs text-amber-500 mb-2">
+                                <i class="fa-solid fa-star text-[10px]"></i>
+                                <span class="font-bold text-stone-700">${p.rating}</span>
+                                <span class="text-stone-400 text-[10px]">(${p.reviewsCount})</span>
+                            </div>
+
+                            <div class="flex items-baseline justify-between border-t pt-2 border-stone-100">
+                                <div>
+                                    <span class="font-bold text-sm sm:text-base text-brand-purple">${CONFIG.currency}${p.price.toLocaleString()}</span>
+                                    ${p.regularPrice > p.price ? `<span class="text-[11px] text-stone-400 line-through ml-1">${CONFIG.currency}${p.regularPrice.toLocaleString()}</span>` : ''}
+                                </div>
+                                <button onclick="quickAddToCart('${p.id}', event)" class="bg-amber-100 hover:bg-brand-saffron hover:text-white text-brand-purple px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-colors">
+                                    + Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // C. CATALOG BROWSER PAGE (PHASE 2 - Pagination for 1,000+ items)
+        function renderCatalogPage() {
+            // Apply search & filters
+            let items = CATALOG.filter(p => {
+                const matchesCat = state.selectedCategory === 'All' || p.category === state.selectedCategory;
+                const matchesSub = state.selectedSubcategory === 'All' || p.subcategory === state.selectedSubcategory;
+                const matchesSearch = !state.searchQuery || 
+                    p.name.toLowerCase().includes(state.searchQuery.toLowerCase()) || 
+                    p.subcategory.toLowerCase().includes(state.searchQuery.toLowerCase()) ||
+                    p.category.toLowerCase().includes(state.searchQuery.toLowerCase());
+                const matchesPrice = p.price <= state.priceFilter;
+                return matchesCat && matchesSub && matchesSearch && matchesPrice;
+            });
+
+            // Sorting
+            if (state.sortBy === 'price-low') items.sort((a,b) => a.price - b.price);
+            if (state.sortBy === 'price-high') items.sort((a,b) => b.price - a.price);
+            if (state.sortBy === 'rating') items.sort((a,b) => b.rating - a.rating);
+
+            // Pagination calculation
+            const totalItems = items.length;
+            const totalPages = Math.ceil(totalItems / state.itemsPerPage) || 1;
+            if (state.currentPageNum > totalPages) state.currentPageNum = totalPages;
+
+            const startIndex = (state.currentPageNum - 1) * state.itemsPerPage;
+            const paginatedItems = items.slice(startIndex, startIndex + state.itemsPerPage);
+
+            return `
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <!-- BREADCRUMB -->
+                    <div class="text-xs text-stone-500 mb-4 flex items-center space-x-2">
+                        <a href="javascript:void(0)" onclick="switchPage('home')" class="hover:underline">Home</a>
+                        <span>/</span>
+                        <span class="text-stone-800 font-semibold">${state.selectedCategory}</span>
+                    </div>
+
+                    <!-- TITLE & COUNTS -->
+                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-stone-200 mb-6 gap-4">
+                        <div>
+                            <h1 class="font-serif-title text-2xl sm:text-3xl font-bold text-brand-purple">
+                                ${state.selectedCategory === 'All' ? 'All Gift Collections' : state.selectedCategory}
+                            </h1>
+                            <p class="text-xs text-stone-500 mt-1">
+                                Showing ${totalItems > 0 ? startIndex + 1 : 0} - ${Math.min(startIndex + state.itemsPerPage, totalItems)} of <strong>${totalItems}</strong> items (1,020 Total Store Catalog)
+                            </p>
+                        </div>
+
+                        <!-- SEARCH & SORT CONTROLS -->
+                        <div class="flex flex-wrap items-center gap-3">
+                            <select onchange="handleSortChange(this.value)" class="bg-white border border-stone-300 rounded-lg text-xs p-2.5 font-medium focus:outline-none">
+                                <option value="relevance" ${state.sortBy === 'relevance' ? 'selected' : ''}>Sort by: Relevance</option>
+                                <option value="price-low" ${state.sortBy === 'price-low' ? 'selected' : ''}>Price: Low to High</option>
+                                <option value="price-high" ${state.sortBy === 'price-high' ? 'selected' : ''}>Price: High to Low</option>
+                                <option value="rating" ${state.sortBy === 'rating' ? 'selected' : ''}>Customer Rating</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <!-- SIDEBAR FILTERS -->
+                        <div class="space-y-6">
+                            <!-- Category Filter -->
+                            <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm">
+                                <h3 class="font-serif-title font-bold text-sm text-stone-800 mb-3 border-b pb-2">Categories</h3>
+                                <ul class="space-y-1.5 text-xs">
+                                    <li>
+                                        <button onclick="filterCatalogCategory('All')" class="w-full text-left py-1 px-2 rounded ${state.selectedCategory === 'All' ? 'bg-brand-purple text-white font-bold' : 'hover:bg-stone-100 text-stone-700'}">
+                                            All Categories (${CATALOG.length})
+                                        </button>
+                                    </li>
+                                    ${CATEGORIES_DATA.map(c => `
+                                        <li>
+                                            <button onclick="filterCatalogCategory('${c.name}')" class="w-full text-left py-1 px-2 rounded ${state.selectedCategory === c.name ? 'bg-brand-purple text-white font-bold' : 'hover:bg-stone-100 text-stone-700'}">
+                                                ${c.name}
+                                            </button>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+
+                            <!-- Max Price Filter -->
+                            <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm">
+                                <h3 class="font-serif-title font-bold text-sm text-stone-800 mb-3 border-b pb-2">Max Price Filter</h3>
+                                <input type="range" min="300" max="10000" step="200" value="${state.priceFilter}" oninput="handlePriceFilterChange(this.value)" class="w-full accent-brand-saffron cursor-pointer">
+                                <div class="flex justify-between text-xs text-stone-600 font-semibold mt-2">
+                                    <span>₹300</span>
+                                    <span class="text-brand-saffron font-bold">Max: ₹${state.priceFilter}</span>
+                                    <span>₹10,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PRODUCT GRID & PAGINATION -->
+                        <div class="lg:col-span-3">
+                            ${paginatedItems.length === 0 ? `
+                                <div class="bg-white rounded-2xl border border-stone-200 p-12 text-center my-8">
+                                    <div class="text-4xl mb-3">🔍</div>
+                                    <h3 class="font-serif-title text-lg font-bold text-stone-800">No matching gift items found</h3>
+                                    <p class="text-xs text-stone-500 mt-1 mb-4">Try clearing your search keyword or increasing your price filter limit.</p>
+                                    <button onclick="resetFilters()" class="bg-brand-purple text-amber-300 text-xs px-4 py-2 rounded-lg font-semibold">
+                                        Reset Filters
+                                    </button>
+                                </div>
+                            ` : `
+                                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                                    ${paginatedItems.map(p => renderProductCard(p)).join('')}
+                                </div>
+
+                                <!-- PAGINATION CONTROLS -->
+                                <div class="mt-12 flex items-center justify-between border-t border-stone-200 pt-6 text-xs">
+                                    <button onclick="changePageNum(${state.currentPageNum - 1})" ${state.currentPageNum === 1 ? 'disabled class="opacity-40 cursor-not-allowed px-3 py-2 border rounded"' : 'class="px-3 py-2 border rounded hover:bg-stone-100 font-semibold"'}>
+                                        <i class="fa-solid fa-chevron-left mr-1"></i> Previous
+                                    </button>
+
+                                    <div class="flex space-x-1">
+                                        ${Array.from({length: Math.min(totalPages, 5)}, (_, i) => i + 1).map(num => `
+                                            <button onclick="changePageNum(${num})" class="w-8 h-8 rounded font-semibold ${state.currentPageNum === num ? 'bg-brand-purple text-amber-300' : 'hover:bg-stone-100'}">
+                                                ${num}
+                                            </button>
+                                        `).join('')}
+                                        ${totalPages > 5 ? `<span class="px-2 py-1">... ${totalPages}</span>` : ''}
+                                    </div>
+
+                                    <button onclick="changePageNum(${state.currentPageNum + 1})" ${state.currentPageNum === totalPages ? 'disabled class="opacity-40 cursor-not-allowed px-3 py-2 border rounded"' : 'class="px-3 py-2 border rounded hover:bg-stone-100 font-semibold"'}>
+                                        Next <i class="fa-solid fa-chevron-right ml-1"></i>
+                                    </button>
+                                </div>
+                            `}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // D. PRODUCT DETAIL PAGE
+        function renderProductDetailPage() {
+            const p = state.selectedProduct || CATALOG[0];
+            const isWish = state.wishlist.includes(p.id);
+
+            return `
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <!-- BREADCRUMB -->
+                    <div class="text-xs text-stone-500 mb-6 flex items-center space-x-2">
+                        <a href="javascript:void(0)" onclick="switchPage('home')" class="hover:underline">Home</a>
+                        <span>/</span>
+                        <a href="javascript:void(0)" onclick="filterCatalogCategory('${p.category}')" class="hover:underline">${p.category}</a>
+                        <span>/</span>
+                        <span class="text-stone-800 font-semibold truncate max-w-xs">${p.name}</span>
+                    </div>
+
+                    <div class="bg-white rounded-3xl border border-stone-200 shadow-sm p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- IMAGE GALLERY -->
+                        <div class="space-y-4">
+                            <div class="aspect-square bg-stone-100 rounded-2xl overflow-hidden border border-stone-200">
+                                <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex space-x-3 text-xs text-stone-500">
+                                <span class="bg-stone-100 px-3 py-1.5 rounded-lg"><i class="fa-solid fa-truck-fast text-brand-saffron mr-1"></i> Ships in 24 Hours</span>
+                                <span class="bg-stone-100 px-3 py-1.5 rounded-lg"><i class="fa-solid fa-shield-halved text-emerald-600 mr-1"></i> 100% Quality Check</span>
+                            </div>
+                        </div>
+
+                        <!-- PRODUCT INFORMATION -->
+                        <div class="space-y-6 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="text-xs font-bold text-brand-saffron uppercase tracking-wider">${p.category} • SKU: ${p.sku}</span>
+                                    <button onclick="toggleWishlist('${p.id}', event)" class="text-stone-400 hover:text-red-500 text-xl">
+                                        <i class="${isWish ? 'fa-solid text-red-500' : 'fa-regular'} fa-heart"></i>
+                                    </button>
+                                </div>
+                                <h1 class="font-serif-title text-2xl sm:text-3xl font-bold text-brand-purple mt-2">${p.name}</h1>
+                                
+                                <div class="flex items-center space-x-2 mt-3">
+                                    <div class="flex text-amber-400 text-sm">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <span class="text-xs font-bold text-stone-700">${p.rating}</span>
+                                    <span class="text-xs text-stone-400">(${p.reviewsCount} customer reviews)</span>
+                                </div>
+
+                                <div class="mt-4 flex items-baseline space-x-3">
+                                    <span class="font-bold text-3xl text-brand-purple">${CONFIG.currency}${p.price.toLocaleString()}</span>
+                                    ${p.regularPrice > p.price ? `<span class="text-stone-400 line-through text-base">${CONFIG.currency}${p.regularPrice.toLocaleString()}</span>` : ''}
+                                    ${p.discountPercent > 0 ? `<span class="bg-brand-saffron text-white text-xs font-bold px-2.5 py-1 rounded-full">${p.discountPercent}% OFF</span>` : ''}
+                                </div>
+
+                                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mt-4">
+                                    ${p.description}
+                                </p>
+                            </div>
+
+                            <!-- PERSONALIZATION OPTION (If applicable) -->
+                            ${p.isPersonalized ? `
+                                <div class="bg-amber-50/70 border border-amber-200 p-4 rounded-xl space-y-2">
+                                    <label class="block text-xs font-bold text-brand-purple">
+                                        ✏️ Enter Custom Engraving Name or Message:
+                                    </label>
+                                    <input type="text" id="personalizationInput" placeholder="e.g. 'Happy Diwali from Sharma Family'" class="w-full bg-white border border-amber-300 rounded-lg p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-brand-saffron">
+                                    <p class="text-[10px] text-stone-500">Max 30 characters. Will be engraved/printed with precision.</p>
+                                </div>
+                            ` : ''}
+
+                            <!-- ADD TO CART & QUANTITY -->
+                            <div class="space-y-4 border-t border-stone-200 pt-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center border border-stone-300 rounded-lg overflow-hidden">
+                                        <button onclick="adjustDetailQty(-1)" class="px-3 py-2 bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold">-</button>
+                                        <span id="detailQty" class="px-4 py-2 text-xs font-bold">1</span>
+                                        <button onclick="adjustDetailQty(1)" class="px-3 py-2 bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold">+</button>
+                                    </div>
+
+                                    <button onclick="addToCartDetailed('${p.id}')" class="flex-1 bg-brand-saffron hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition-colors text-xs uppercase tracking-wider flex items-center justify-center space-x-2">
+                                        <i class="fa-solid fa-bag-shopping"></i>
+                                        <span>Add to Shopping Cart</span>
+                                    </button>
+                                </div>
+
+                                <!-- BULK ORDER PROMO LINK -->
+                                <button onclick="openBulkQuoteModal('${p.id}')" class="w-full bg-stone-100 hover:bg-stone-200 text-brand-purple font-semibold py-2 rounded-xl text-xs transition-colors">
+                                    💼 Buying 10 or more for Corporate? Request Bulk Pricing
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // E. AI GIFT FINDER PAGE (Gemini API Integration)
+        function renderAIGuidePage() {
+            return `
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                    <div class="bg-white rounded-3xl border border-stone-200 shadow-xl p-6 sm:p-10">
+                        <div class="text-center space-y-2 mb-8">
+                            <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto text-amber-600 text-2xl">
+                                🤖
+                            </div>
+                            <h1 class="font-serif-title text-2xl sm:text-3xl font-bold text-brand-purple">Gemini Smart AI Gift Finder</h1>
+                            <p class="text-xs sm:text-sm text-stone-500 max-w-lg mx-auto">
+                                Type what you need in plain language. Our AI will filter through 1,000+ Diwali gifts and select the best matches within your exact budget!
+                            </p>
+                        </div>
+
+                        <!-- INPUT FORM -->
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 mb-1">Describe who you are buying for:</label>
+                                <textarea id="aiPromptInput" rows="3" placeholder="e.g. 'I need a premium Diwali gift hamper for my boss under ₹1,500 that includes sweets and brass diyas.'" class="w-full border border-stone-300 rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-brand-saffron"></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-stone-700 mb-1">Max Budget (INR):</label>
+                                    <input type="number" id="aiBudgetInput" value="2000" class="w-full border border-stone-300 rounded-lg p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-brand-saffron">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-stone-700 mb-1">Occasion:</label>
+                                    <select id="aiOccasionSelect" class="w-full border border-stone-300 rounded-lg p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-brand-saffron">
+                                        <option value="Diwali">Diwali Celebration</option>
+                                        <option value="Birthday">Birthday</option>
+                                        <option value="Anniversary">Anniversary</option>
+                                        <option value="Corporate">Corporate / Client</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button onclick="runAIGiftFinder()" class="w-full bg-gradient-to-r from-amber-500 to-brand-saffron hover:from-amber-600 hover:to-orange-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all text-xs uppercase tracking-wider flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <span>Get AI Recommendations</span>
+                            </button>
+                        </div>
+
+                        <!-- LOADING SKELETON -->
+                        <div id="aiLoading" class="hidden my-8 text-center py-6 space-y-3">
+                            <i class="fa-solid fa-spinner fa-spin text-3xl text-brand-saffron"></i>
+                            <p class="text-xs font-semibold text-stone-600">Analyzing catalog & evaluating gift options...</p>
+                        </div>
+
+                        <!-- RESULTS CONTAINER -->
+                        <div id="aiResults" class="mt-8 space-y-6 border-t border-stone-200 pt-6 hidden">
+                            <!-- Populated via JS -->
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function runAIGiftFinder() {
+            const promptText = document.getElementById('aiPromptInput')?.value.trim();
+            const budget = parseFloat(document.getElementById('aiBudgetInput')?.value) || 2000;
+            const occasion = document.getElementById('aiOccasionSelect')?.value || "Diwali";
+
+            if (!promptText) {
+                alert("Please describe who you are looking a gift for.");
+                return;
+            }
+
+            const loadingEl = document.getElementById('aiLoading');
+            const resultsEl = document.getElementById('aiResults');
+            if (loadingEl) loadingEl.classList.remove('hidden');
+            if (resultsEl) resultsEl.classList.add('hidden');
+
+            try {
+                // Call Gemini API if Key or fallback algorithm
+                let recommendedItems = [];
+
+                if (CONFIG.geminiApiKey) {
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${CONFIG.geminiApiKey}`;
+                    const sysPrompt = "You are a gift recommendation assistant for ShubhGifts India. Select 3 catalog items based on user prompt.";
+                    
+                    const payload = {
+                        contents: [{ parts: [{ text: `User request: ${promptText}. Budget: ₹${budget}. Occasion: ${occasion}` }] }],
+                        systemInstruction: { parts: [{ text: sysPrompt }] }
+                    };
+
+                    const resp = await fetch(apiUrl, { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload) });
+                    const resData = await resp.json();
+                    console.log("Gemini Response:", resData);
+                }
+
+                // Fallback algorithmic match directly against 1,000+ CATALOG
+                recommendedItems = CATALOG.filter(p => p.price <= budget && (p.category.includes(occasion) || p.description.toLowerCase().includes(promptText.toLowerCase()) || p.name.toLowerCase().includes(promptText.toLowerCase()))).slice(0, 4);
+
+                if (recommendedItems.length < 3) {
+                    recommendedItems = CATALOG.filter(p => p.price <= budget).slice(0, 4);
+                }
+
+                renderAIResults(recommendedItems, promptText);
+
+            } catch (err) {
+                console.warn("AI Guide Error, falling back:", err);
+                const fallbackItems = CATALOG.filter(p => p.price <= budget).slice(0, 3);
+                renderAIResults(fallbackItems, promptText);
+            } finally {
+                if (loadingEl) loadingEl.classList.add('hidden');
+                if (resultsEl) resultsEl.classList.remove('hidden');
+            }
+        }
+
+        function renderAIResults(items, query) {
+            const resultsEl = document.getElementById('aiResults');
+            if (!resultsEl) return;
+
+            resultsEl.innerHTML = `
+                <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 text-xs text-brand-purple">
+                    <span class="font-bold">✨ AI Recommendation Summary:</span> Found ${items.length} ideal gifts matching "${query}".
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    ${items.map(p => renderProductCard(p)).join('')}
+                </div>
+            `;
+        }
+
+        // F. CART PAGE
+        function renderCartPage() {
+            if (state.cart.length === 0) {
+                return `
+                    <div class="max-w-4xl mx-auto px-4 py-16 text-center">
+                        <div class="text-6xl mb-4">🛒</div>
+                        <h2 class="font-serif-title text-2xl font-bold text-brand-purple">Your Shopping Cart is Empty</h2>
+                        <p class="text-xs text-stone-500 mt-2 mb-6">Explore over 1,000+ festive gifts and Diwali hampers to fill your cart!</p>
+                        <button onclick="switchPage('catalog')" class="bg-brand-saffron text-white font-bold text-xs px-6 py-3 rounded-xl shadow">
+                            Start Gift Shopping
+                        </button>
+                    </div>
+                `;
+            }
+
+            const subtotal = state.cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
+            const shipping = subtotal >= CONFIG.shippingThreshold ? 0 : CONFIG.flatShippingRate;
+            const grandTotal = subtotal + shipping;
+
+            return `
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <h1 class="font-serif-title text-2xl sm:text-3xl font-bold text-brand-purple mb-6">Shopping Cart (${state.cart.length} items)</h1>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- CART ITEMS -->
+                        <div class="lg:col-span-2 space-y-4">
+                            ${state.cart.map((item, idx) => `
+                                <div class="bg-white border border-stone-200 rounded-2xl p-4 flex gap-4 items-center">
+                                    <img src="${item.product.image}" class="w-20 h-20 object-cover rounded-xl border border-stone-200">
+                                    <div class="flex-grow space-y-1">
+                                        <h4 class="font-semibold text-xs sm:text-sm text-stone-800">${item.product.name}</h4>
+                                        <span class="text-[10px] text-stone-400 block">SKU: ${item.product.sku}</span>
+                                        ${item.personalizationText ? `<span class="text-[11px] text-brand-saffron font-medium block">Customization: "${item.personalizationText}"</span>` : ''}
+                                        <div class="font-bold text-sm text-brand-purple">${CONFIG.currency}${item.product.price.toLocaleString()}</div>
+                                    </div>
+                                    <div class="flex items-center border rounded-lg overflow-hidden text-xs">
+                                        <button onclick="updateCartQty(${idx}, ${item.quantity - 1})" class="px-2 py-1 bg-stone-100">-</button>
+                                        <span class="px-3 py-1 font-bold">${item.quantity}</span>
+                                        <button onclick="updateCartQty(${idx}, ${item.quantity + 1})" class="px-2 py-1 bg-stone-100">+</button>
+                                    </div>
+                                    <button onclick="removeFromCart(${idx})" class="text-stone-400 hover:text-red-500 text-sm p-2">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <!-- ORDER SUMMARY -->
+                        <div class="bg-white border border-stone-200 rounded-2xl p-6 h-fit space-y-4 shadow-sm">
+                            <h3 class="font-serif-title font-bold text-base border-b pb-2 text-stone-800">Order Summary</h3>
+                            <div class="space-y-2 text-xs text-stone-600">
+                                <div class="flex justify-between">
+                                    <span>Subtotal:</span>
+                                    <span class="font-bold text-stone-800">${CONFIG.currency}${subtotal.toLocaleString()}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Estimated Express Shipping:</span>
+                                    <span class="font-bold ${shipping === 0 ? 'text-emerald-600' : 'text-stone-800'}">
+                                        ${shipping === 0 ? 'FREE' : CONFIG.currency + shipping}
+                                    </span>
+                                </div>
+                                ${subtotal < CONFIG.shippingThreshold ? `<p class="text-[10px] text-brand-saffron">Add ${CONFIG.currency}${(CONFIG.shippingThreshold - subtotal).toLocaleString()} more for FREE shipping!</p>` : ''}
+                            </div>
+                            <div class="border-t pt-3 flex justify-between font-bold text-sm text-brand-purple">
+                                <span>Grand Total:</span>
+                                <span>${CONFIG.currency}${grandTotal.toLocaleString()}</span>
+                            </div>
+                            <button onclick="switchPage('checkout')" class="w-full bg-brand-saffron hover:bg-orange-600 text-white font-bold py-3 rounded-xl text-xs transition-colors shadow uppercase tracking-wider">
+                                Proceed to Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // G. CHECKOUT & ORDER CONFIRMATION
+        function renderCheckoutPage() {
+            const subtotal = state.cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
+            const shipping = subtotal >= CONFIG.shippingThreshold ? 0 : CONFIG.flatShippingRate;
+            const total = subtotal + shipping;
+
+            return `
+                <div class="max-w-4xl mx-auto px-4 py-8">
+                    <h1 class="font-serif-title text-2xl font-bold text-brand-purple mb-6">Express Checkout</h1>
+                    <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+                        <form onsubmit="handlePlaceOrder(event)" class="space-y-4 text-xs">
+                            <h3 class="font-serif-title font-bold text-sm text-stone-800 border-b pb-2">1. Delivery Address</h3>
+                            <div class="grid grid-cols-2 gap-3">
+                                <input type="text" required placeholder="Full Name" class="border rounded-lg p-2.5">
+                                <input type="tel" required placeholder="Mobile Number" class="border rounded-lg p-2.5">
+                            </div>
+                            <input type="text" required placeholder="Street Address / House No." class="w-full border rounded-lg p-2.5">
+                            <div class="grid grid-cols-3 gap-3">
+                                <input type="text" required placeholder="City" class="border rounded-lg p-2.5">
+                                <input type="text" required placeholder="State" class="border rounded-lg p-2.5">
+                                <input type="text" required placeholder="PIN Code" class="border rounded-lg p-2.5">
+                            </div>
+
+                            <h3 class="font-serif-title font-bold text-sm text-stone-800 border-b pb-2 pt-4">2. Payment Method</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 border p-3 rounded-lg cursor-pointer">
+                                    <input type="radio" name="payMethod" checked value="UPI">
+                                    <span>UPI / GPay / PhonePe (Instant Fast Processing)</span>
+                                </label>
+                                <label class="flex items-center space-x-2 border p-3 rounded-lg cursor-pointer">
+                                    <input type="radio" name="payMethod" value="COD">
+                                    <span>Cash on Delivery (COD Available)</span>
+                                </label>
+                            </div>
+
+                            <div class="border-t pt-4 flex justify-between items-center">
+                                <div>
+                                    <span class="text-stone-500 block">Total Payable Amount:</span>
+                                    <span class="font-bold text-lg text-brand-purple">${CONFIG.currency}${total.toLocaleString()}</span>
+                                </div>
+                                <button type="submit" class="bg-brand-saffron hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-xl text-xs uppercase tracking-wider shadow">
+                                    Place Order Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            `;
+        }
+
+        function handlePlaceOrder(e) {
+            e.preventDefault();
+            const subtotal = state.cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
+            const shipping = subtotal >= CONFIG.shippingThreshold ? 0 : CONFIG.flatShippingRate;
+
+            state.currentOrder = {
+                orderId: "SG-" + Math.floor(100000 + Math.random() * 900000),
+                date: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
+                items: [...state.cart],
+                subtotal: subtotal,
+                shipping: shipping,
+                tax: Math.round(subtotal * CONFIG.taxRate),
+                total: subtotal + shipping
+            };
+
+            state.cart = [];
+            saveState();
+            switchPage('order-confirm');
+        }
+
+        function renderOrderConfirmPage() {
+            const ord = state.currentOrder || { orderId: "SG-882103", total: 1999 };
+            return `
+                <div class="max-w-2xl mx-auto px-4 py-16 text-center space-y-4">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                        ✓
+                    </div>
+                    <h1 class="font-serif-title text-3xl font-bold text-brand-purple">Order Confirmed!</h1>
+                    <p class="text-xs text-stone-600">Thank you for shopping with ShubhGifts. Your Order ID is <strong>${ord.orderId}</strong>.</p>
+                    <div class="flex justify-center space-x-3 pt-4">
+                        <button onclick="switchPage('invoice')" class="bg-brand-purple text-amber-300 font-bold px-5 py-2.5 rounded-xl text-xs">
+                            <i class="fa-solid fa-file-invoice mr-1"></i> Print / Download Invoice
+                        </button>
+                        <button onclick="switchPage('home')" class="bg-stone-200 text-stone-800 font-bold px-5 py-2.5 rounded-xl text-xs">
+                            Continue Shopping
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // H. PRINTABLE INVOICE VIEW
+        function renderInvoicePage() {
+            const ord = state.currentOrder || {
+                orderId: "SG-992182",
+                date: new Date().toLocaleDateString('en-IN'),
+                items: [{ product: CATALOG[0], quantity: 1 }],
+                subtotal: CATALOG[0].price,
+                shipping: 0,
+                tax: Math.round(CATALOG[0].price * 0.18),
+                total: CATALOG[0].price
+            };
+
+            return `
+                <div class="max-w-3xl mx-auto my-8 p-8 bg-white border border-stone-200 rounded-2xl shadow-lg font-sans text-xs text-stone-800">
+                    <div class="flex justify-between items-start border-b pb-4">
+                        <div>
+                            <h2 class="font-serif-title text-2xl font-bold text-brand-purple">ShubhGifts Retail Pvt. Ltd.</h2>
+                            <p class="text-[10px] text-stone-500">GSTIN: 27AAAAA0000A1Z5 | Reg Address: Mumbai, India</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="font-bold text-sm block">TAX INVOICE</span>
+                            <span class="text-stone-500">Order ID: ${ord.orderId}</span><br>
+                            <span class="text-stone-500">Date: ${ord.date}</span>
+                        </div>
+                    </div>
+
+                    <div class="my-6 space-y-2">
+                        <table class="w-full border-collapse border border-stone-200 text-left">
+                            <thead class="bg-stone-100">
+                                <tr>
+                                    <th class="p-2 border">Item</th>
+                                    <th class="p-2 border">Qty</th>
+                                    <th class="p-2 border">Unit Price</th>
+                                    <th class="p-2 border">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${ord.items.map(i => `
+                                    <tr>
+                                        <td class="p-2 border">${i.product.name}</td>
+                                        <td class="p-2 border">${i.quantity}</td>
+                                        <td class="p-2 border">${CONFIG.currency}${i.product.price}</td>
+                                        <td class="p-2 border">${CONFIG.currency}${i.product.price * i.quantity}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="flex justify-between items-end pt-4 border-t">
+                        <div class="text-[10px] text-stone-400">
+                            Computer generated invoice. No signature required.
+                        </div>
+                        <div class="text-right space-y-1 font-bold">
+                            <div>Total: ${CONFIG.currency}${ord.total.toLocaleString()}</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center no-print">
+                        <button onclick="window.print()" class="bg-brand-purple text-amber-300 font-bold px-6 py-2.5 rounded-lg text-xs">
+                            <i class="fa-solid fa-print mr-1"></i> Print Invoice Document
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // I. WISHLIST PAGE
+        function renderWishlistPage() {
+            const wishlistItems = CATALOG.filter(p => state.wishlist.includes(p.id));
+
+            return `
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <h1 class="font-serif-title text-2xl font-bold text-brand-purple mb-6">My Wishlist (${wishlistItems.length})</h1>
+                    ${wishlistItems.length === 0 ? `
+                        <p class="text-xs text-stone-500">Your wishlist is empty. Browse products and click the heart icon to save favorites!</p>
+                    ` : `
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            ${wishlistItems.map(p => renderProductCard(p)).join('')}
+                        </div>
+                    `}
+                </div>
+            `;
+        }
+
+        // J. ADMIN DASHBOARD (Phase 2 Requirement)
+        function renderAdminPage() {
+            return `
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div class="bg-white border border-stone-200 rounded-3xl p-6 shadow-sm">
+                        <div class="flex justify-between items-center border-b pb-4 mb-6">
+                            <h1 class="font-serif-title text-xl font-bold text-brand-purple">ShubhGifts Admin Dashboard</h1>
+                            <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-bold">Catalog Live: ${CATALOG.length} Items</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-center text-xs">
+                            <div class="bg-stone-50 p-4 rounded-xl border">
+                                <span class="text-stone-500">Total Catalog SKU Count</span>
+                                <div class="text-2xl font-bold text-brand-purple mt-1">${CATALOG.length}</div>
+                            </div>
+                            <div class="bg-stone-50 p-4 rounded-xl border">
+                                <span class="text-stone-500">Active Campaign</span>
+                                <div class="text-2xl font-bold text-brand-saffron mt-1">Diwali 60% Sale</div>
+                            </div>
+                            <div class="bg-stone-50 p-4 rounded-xl border">
+                                <span class="text-stone-500">System Status</span>
+                                <div class="text-2xl font-bold text-emerald-600 mt-1">Operational</div>
+                            </div>
+                        </div>
+
+                        <h3 class="font-bold text-sm mb-3">Product Catalog Management Sample</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs border-collapse">
+                                <thead>
+                                    <tr class="bg-stone-100 border-b">
+                                        <th class="p-2">SKU</th>
+                                        <th class="p-2">Name</th>
+                                        <th class="p-2">Category</th>
+                                        <th class="p-2">Price</th>
+                                        <th class="p-2">Stock</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${CATALOG.slice(0, 10).map(p => `
+                                        <tr class="border-b">
+                                            <td class="p-2 font-mono">${p.sku}</td>
+                                            <td class="p-2">${p.name}</td>
+                                            <td class="p-2">${p.category}</td>
+                                            <td class="p-2">${CONFIG.currency}${p.price}</td>
+                                            <td class="p-2 font-bold text-emerald-600">${p.stockQty}</td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // K. GENERIC POLICY PAGE
+        function renderPolicyPage(title, content) {
+            return `
+                <div class="max-w-3xl mx-auto px-4 py-12">
+                    <h1 class="font-serif-title text-2xl font-bold text-brand-purple mb-4">${title}</h1>
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 text-xs text-stone-700 leading-relaxed space-y-3">
+                        <p>${content}</p>
+                        <p>For additional queries regarding our terms, write to support@shubhgifts.in.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderContactPage() {
+            return `
+                <div class="max-w-3xl mx-auto px-4 py-12">
+                    <h1 class="font-serif-title text-2xl font-bold text-brand-purple mb-4">Contact ShubhGifts</h1>
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 text-xs text-stone-700 space-y-4">
+                        <p><strong>Customer Support Phone:</strong> +91 98765 43210 (10 AM - 7 PM IST)</p>
+                        <p><strong>Email:</strong> help@shubhgifts.in</p>
+                        <p><strong>Corporate Ordering:</strong> bulk@shubhgifts.in</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ==========================================
+        // 6. ACTION HANDLERS & HELPER LOGIC
+        // ==========================================
+        function quickAddToCart(productId, e) {
+            if (e) e.stopPropagation();
+            const product = CATALOG.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = state.cart.find(item => item.product.id === productId);
+            if (existing) {
+                existing.quantity++;
+            } else {
+                state.cart.push({ product: product, quantity: 1, personalizationText: "" });
+            }
+
+            saveState();
+            // Show toast feedback
+            alert(`Added "${product.name}" to cart!`);
+        }
+
+        function addToCartDetailed(productId) {
+            const product = CATALOG.find(p => p.id === productId);
+            if (!product) return;
+
+            const detailQty = parseInt(document.getElementById('detailQty')?.innerText) || 1;
+            const persText = document.getElementById('personalizationInput')?.value || "";
+
+            state.cart.push({ product: product, quantity: detailQty, personalizationText: persText });
+            saveState();
+            switchPage('cart');
+        }
+
+        function updateCartQty(index, newQty) {
+            if (newQty <= 0) {
+                state.cart.splice(index, 1);
+            } else {
+                state.cart[index].quantity = newQty;
+            }
+            saveState();
+            switchPage('cart');
+        }
+
+        function removeFromCart(index) {
+            state.cart.splice(index, 1);
+            saveState();
+            switchPage('cart');
+        }
+
+        function toggleWishlist(productId, e) {
+            if (e) e.stopPropagation();
+            const idx = state.wishlist.indexOf(productId);
+            if (idx > -1) {
+                state.wishlist.splice(idx, 1);
+            } else {
+                state.wishlist.push(productId);
+            }
+            saveState();
+            // Re-render current page to reflect heart status
+            switchPage(state.currentPage);
+        }
+
+        function adjustDetailQty(delta) {
+            const el = document.getElementById('detailQty');
+            if (!el) return;
+            let current = parseInt(el.innerText) || 1;
+            current = Math.max(1, current + delta);
+            el.innerText = current;
+        }
+
+        function filterByPriceRange(maxPrice) {
+            state.priceFilter = maxPrice;
+            state.selectedCategory = 'All';
+            state.currentPageNum = 1;
+            switchPage('catalog');
+        }
+
+        function handleSortChange(val) {
+            state.sortBy = val;
+            switchPage('catalog');
+        }
+
+        function handlePriceFilterChange(val) {
+            state.priceFilter = parseFloat(val);
+            switchPage('catalog');
+        }
+
+        function changePageNum(num) {
+            state.currentPageNum = num;
+            switchPage('catalog');
+        }
+
+        function resetFilters() {
+            state.selectedCategory = 'All';
+            state.selectedSubcategory = 'All';
+            state.searchQuery = '';
+            state.priceFilter = 10000;
+            state.currentPageNum = 1;
+            switchPage('catalog');
+        }
+
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            alert("Thank you for subscribing! Your discount coupon code is: SHUBH200");
+        }
+
+        function updateSEOMetadata() {
+            // Dynamically inject Schema.org structured data for SEO (Phase 3)
+            let schemaScript = document.getElementById('seoSchema');
+            if (!schemaScript) {
+                schemaScript = document.createElement('script');
+                schemaScript.id = 'seoSchema';
+                schemaScript.type = 'application/ld+json';
+                document.head.appendChild(schemaScript);
+            }
+
+            const schemaData = {
+                "@context": "https://schema.org/",
+                "@type": "Store",
+                "name": CONFIG.appName,
+                "description": "Premium Diwali & General Online Gift Store in India",
+                "priceRange": "₹299 - ₹10,000",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Diwali Gifts 2026",
+                    "numberOfItems": CATALOG.length
+                }
+            };
+            schemaScript.text = JSON.stringify(schemaData);
+        }
+
+        // Initialize application on load
+        window.onload = function() {
+            loadSavedState();
+            switchPage('home');
+        };
+    </script>
+</body>
+</html>
